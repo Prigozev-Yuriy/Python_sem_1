@@ -49,24 +49,43 @@
 # В следующих строках располагается N целых чисел. Каждое число – среднесуточная температура в соответствующий день.
 # Температуры – целые числа и лежат в диапазоне от –50 до 50
 # Input:    6 -> -20 30 -40 50 10 -10 Output: 2
+#
+# amount_of_days = int(input('Введите количество дней: '))
+# average_daily_temperature = []
+# i = 0
+# summa_1 = 0
+# summa_2 = 0
+# while i < amount_of_days:
+#     temp = int(input(f'Введите среднесуточную температуру {i+1} дня: '))
+#     average_daily_temperature.append(temp)
+#     i +=1
+#     if temp > 0:
+#         summa_1 += 1
+#         if summa_2 < summa_1:
+#             summa_2 = summa_1
+#     else:
+#         summa_1 = 0
+# print(summa_2)
 
-amount_of_days = int(input('Введите количество дней: '))
 
 
-average_daily_temperature = []
+# Задача №15.
+# Иван Васильевич пришел на рынок и решил купить два арбуза: один для себя, а другой для тещи.
+# Понятно, что для себя нужно выбрать арбуз потяжелей, а для тещи полегче.
+# Но вот незадача: арбузов слишком много и он не знает как же выбрать самый легкий и самый тяжелый арбуз?
+# Помогите ему!
+# Пользователь вводит одно число N – количество арбузов.
+# Вторая строка содержит N чисел, записанных на новой строчке каждое.
+# Здесь каждое число – это масса соответствующего арбуза
+# Input: 5 -> 5 1 6 5 9 Output: 1 9
+
+
+
+quantity = int(input('Введитеколичество арбузов: '))
 i = 0
-summa_1 = 0
-summa_2 = 0
-while i < amount_of_days:
-    temp = int(input(f'Введите среднесуточную температуру {i+1} дня: '))
-    average_daily_temperature.append(temp)
+many_watermelons = []
+while i < quantity:
+    temp = int(input(f'Введите вес {i+1} арбуза: '))
+    many_watermelons.append(temp)
     i +=1
-    if temp > 0:
-        summa_1 += 1
-        if summa_2 < summa_1:
-            summa_2 = summa_1
-    else:
-        summa_1 = 0
-
-print(summa_2)
-
+print(min(many_watermelons), max(many_watermelons))
